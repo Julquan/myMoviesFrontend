@@ -11,9 +11,9 @@ function Home() {
   const [moviesData, setmoviesData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/movies/')
+    fetch('https://my-movies-backend-sepia.vercel.app//movies')
     .then(response => response.json())
-    .then(data => {setmoviesData(data.movies.results);
+    .then(data => {setmoviesData(data.movies);
       
     });
   },[]);
